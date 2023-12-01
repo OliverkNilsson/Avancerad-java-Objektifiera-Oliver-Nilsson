@@ -7,6 +7,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="eclipsesource.minimal.json" level="project" />
+    <orderEntry type="library" name="fasterxml.jackson.datatype.json" level="project" />
   </component>
+  <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.13.0</version> <!-- Use the latest version available -->
+  </dependency>
 </module>

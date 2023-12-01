@@ -1,14 +1,16 @@
 import javax.swing.table.DefaultTableModel;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class JSONLoader {
     private DefaultTableModel tableModel;
+
     public JSONLoader (DefaultTableModel tableModel) {
         this.tableModel = tableModel;
     }
-    public void loadJSONfile() {
+    public void loadJSONFile() {
         // Resets column and row count when I load the file
         tableModel.setRowCount(0);
         tableModel.setColumnCount(0);
@@ -38,6 +40,5 @@ public class JSONLoader {
         for (String[] rowData : aryL) {
             tableModel.addRow(rowData);
         }
-
     }
 }

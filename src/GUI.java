@@ -54,7 +54,7 @@ public class GUI extends JFrame {
         jsonSelection.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                jsonLoader.loadJSONfile();
+
             }
         });
         bottomBottom.add(jsonSelection);
