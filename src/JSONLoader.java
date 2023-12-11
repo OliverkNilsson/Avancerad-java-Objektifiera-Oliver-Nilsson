@@ -3,18 +3,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.swing.table.DefaultTableModel;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Scanner;
 
 public class JSONLoader {
-    private DefaultTableModel tableModel;
+    private final DefaultTableModel tableModel;
 
-    public JSONLoader (DefaultTableModel tableModel) {
+    public JSONLoader(DefaultTableModel tableModel) {
         this.tableModel = tableModel;
     }
+
     public void loadJSONFile() {
         // Resets column and row count when I load the file
         tableModel.setRowCount(0);
@@ -22,7 +21,9 @@ public class JSONLoader {
 
         // Creating a ArrayList to store all the content from the CSV-file
         ArrayList<String[]> aryL = new ArrayList<>();
+
         try {
+            // Loading the Json file and parsing it in to a JsonNode "rootNode"
             File json = new File("src/sample.json");
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode rootNode = objectMapper.readTree(json);
@@ -49,6 +50,6 @@ public class JSONLoader {
             for (String[] rowData : aryL) {
                 tableModel.addRow(rowData);
             }
-    }
+        }
     }
 }
