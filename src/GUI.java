@@ -11,7 +11,7 @@ public class GUI extends JFrame {
     private JTable table;
     private DefaultTableModel tableModel;
 
-    GUI () {
+    GUI() {
 
         // Creating the frame and setting it to fullscreen
         setTitle("CSV & JSON viewer");

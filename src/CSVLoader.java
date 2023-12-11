@@ -5,11 +5,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CSVLoader {
-    private DefaultTableModel tableModel;
+    private final DefaultTableModel tableModel;
 
-    public CSVLoader (DefaultTableModel tableModel) {
+    public CSVLoader(DefaultTableModel tableModel) {
         this.tableModel = tableModel;
     }
+
     public void loadCSVFile() {
         // Resets column and row count when I load the file
         tableModel.setRowCount(0);
