@@ -30,7 +30,7 @@ public class CSVLoader {
             }
             sc.close();
         } catch (Exception e) {
-            System.out.println("ERROR" + e.toString());
+            System.out.println("ERROR" + e);
         }
 
         if (!aryL.isEmpty()) {  // If aryL is not empty start adding the aryL to the table
